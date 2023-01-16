@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+html {
+  max-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contenedor {
+  height: 100vh;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+  position: relative;
+  z-index: 0;
+  display: grid;
+  place-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.contenedor::before {
+  content: '';
+  background: rgb(165,165,165);
+  background: linear-gradient(90deg, rgba(165,165,165,0.08196782130821079) 0%, rgba(237,237,237,0.09317230310092783) 50%, rgba(168,168,168,0.08476894175639005) 100%);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
 }
 
-.App-link {
-  color: #61dafb;
+.contenedor-calculadora {
+  font-size: 20px;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  font-weight: 600;
+  color: rgba(255,255,255,.8);
+  width: 500px;
+  height: 600px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contenedor-numeros {
+  display: grid;
+  gap: 1rem;
 }
+
+.suma {
+  grid-column: 4 / span 1;
+  grid-row: 2 / span 2;
+}
+
+.igual {
+  grid-column: 4 / span 1;
+  grid-row: 4 / span 2;
+}
+
+.cero {
+  grid-column: 1 / span 2;
+}
+

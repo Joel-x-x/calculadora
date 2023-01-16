@@ -1,0 +1,28 @@
+.boton {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all .2s ease;
+  color: #000;
+  min-height: 60px;
+  border-radius: 3px;
+}
+
+.numero {
+  background-color: rgba(0, 0, 0, 0.409);
+  color: #fff;
+}
+
+.number:hover {
+  background-color: transparent;
+}
+
+.operador {
+  background-color: rgba(255, 255, 255, 0.489);
+}
+
+.borrar {
+  background-color: rgb(255, 77, 0);
+}
